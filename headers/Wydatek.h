@@ -13,7 +13,8 @@ class Wydatek {
     Kategoria rodzaj_;
     int cena;
 public:
-    operator<<(ostream & out); //czy to doda ten wydatek to listy "zakupy"?
+    friend ostream& operator<<(ostream& out, const Wydatek& w); //czy to doda ten wydatek to listy "zakupy"?
+	// nie, to wypisze Wydatek na strumien, badz to do pliku, badz to na konsole
 };
 
 #endif
