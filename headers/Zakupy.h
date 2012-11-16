@@ -4,6 +4,7 @@
 #include "Kategoria.h"
 #include "data.h"
 #include <string>
+#define MAX_KATEGORII 10
 
 class Zakupy {
     Kalendarz kalendarz_;
@@ -14,7 +15,7 @@ public:
     void wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo);
     void wypiszWydatkiZKategorii ();
     void szukanieNajtanszychProduktow ();//bedzie dawal wybor kategorii, nazwy
-}
+};
 
 
 #endif

@@ -4,7 +4,7 @@
 
 
 
-class ElementListy;
+class ElementListy
 {
 public:
     Wydatek* w;

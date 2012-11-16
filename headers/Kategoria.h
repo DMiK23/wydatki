@@ -11,6 +11,7 @@ class Kategoria{
     string nazwa_;
     ElementListy* poczatekListyA_;
 public:
+    Kategoria();
     Kategoria (string nazwa);
     string getNazwa ();
     void wypiszWydatkiZKategorii (ostream& out);

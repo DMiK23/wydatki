@@ -4,6 +4,7 @@
 #include "Data.h"
 #include <ostream>
 using std::ostream;
+using std::string;
 
 class Wydatek {
     string produkt_;
@@ -13,7 +14,7 @@ class Wydatek {
     Data kiedy_;
 
 public:
-    Wydatek ( string nazwa, string sklep, int ilosc, int cena, Data kiedy);
+    Wydatek ( string nazwa, string sklep, int ilosc, int cena, const Data& kiedy);
     string getSklep ();
     Data getData ();
     int getCena ();

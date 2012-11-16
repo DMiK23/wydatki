@@ -9,7 +9,6 @@ class Data{
     int rok_;
 public:
     Data (int d, int m, int r);
-    Data (const Data& d);
     int compare (const Data& d);
     friend ostream& operator<<(ostream& out, const Data& d);
 };
