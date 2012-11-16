@@ -12,12 +12,12 @@ Wydatek::Wydatek ( string nazwa, string sklep, int ilosc, int cena, const Data& 
 
 string Wydatek::getSklep ()
 {
-
+	return NULL;
 }
 
 Data Wydatek::getData ()
 {
-
+	return Data(0, 0, 0);
 }
 
 int Wydatek::getCena ()
@@ -27,5 +27,5 @@ int Wydatek::getCena ()
 
 ostream& operator<<(ostream& out, const Wydatek& w)
 {
-
+	return out;
 }

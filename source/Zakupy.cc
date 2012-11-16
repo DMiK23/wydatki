@@ -28,5 +28,3 @@ void Zakupy::szukanieNajtanszychProduktow ()//bedzie dawal wybor kategorii, nazw
 {
 
 }
-
-
