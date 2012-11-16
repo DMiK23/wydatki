@@ -8,11 +8,15 @@ using namespace std;
 
 class Kategoria{
     string nazwa_;
-    ElementListy elementListyA_;
+    ElementListy* poczatekListyA_;
 public:
+    Kategoria (string nazwa);
     string getNazwa ();
-    ElementListy getRoot ();
-    void wypiszWydatkiZKategorii (elementListyA_)
+    void wypiszWydatkiZKategorii (ostream& out);
+    void dodajWydatek (Wydatek* w);
+    Wydatek* znajdzNajtanszy (string produkt);
+    friend ostream& operator<<(ostream& out, const Kategoria& k);
+
 };
 
 

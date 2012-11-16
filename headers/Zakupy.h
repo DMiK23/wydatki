@@ -1,15 +1,19 @@
 #ifndef ZAKUPY_H
 #define ZAKUPY_H
-#include "Wydatek.h"
+#include "Kalendarz.h"
+#include "Kategoria.h"
+#include "data.h"
 #include <string>
 
 class Zakupy {
-    Kalendarz&;
-    Kategoria* kategorie_;
+    Kalendarz kalendarz_;
+    Kategoria kategorie_[MAX_KATEGORII];
 public:
-    bool addWydatek (Wydatek& w);
+    Zakupy(); // tworzy liste kategorii
+    bool addWydatek (Wydatek* w);
     void wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo);
-    void znajdzNajtanszy ();//bedzie dawal wybor kategorii, nazwy
+    void wypiszWydatkiZKategorii ();
+    void szukanieNajtanszychProduktow ();//bedzie dawal wybor kategorii, nazwy
 }
 
 

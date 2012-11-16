@@ -16,6 +16,7 @@ public:
     string getSklep ();
     Data getData ();
     int getCena ();
+    friend ostream& operator<<(ostream& out, const Wydatek& w);
 };
 
 #endif
