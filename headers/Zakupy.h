@@ -4,14 +4,12 @@
 #include <string>
 
 class Zakupy {
-    Wydatek* wydatki_;
-    int liczbaWydatkow_;
-    int limitLiczyWydatkow_;
+    Kalendarz&;
     Kategoria* kategorie_;
 public:
-    void dodajWydatek (Wydatek* wydatek_); //czy to powinno byc tu czy w "wtdatek"? czy moze to uzywa "<<"?
-    void wypiszZOkresu (const Data& dataOd, const Data& dataDo);
-    void znajdzNajtanszy (ostream & out, Wydatek* wyd);
+    bool addWydatek (Wydatek& w);
+    void wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo);
+    void znajdzNajtanszy ();//bedzie dawal wybor kategorii, nazwy
 }
 
 
