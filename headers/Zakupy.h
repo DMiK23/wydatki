@@ -2,7 +2,7 @@
 #define ZAKUPY_H
 #include "Kalendarz.h"
 #include "Kategoria.h"
-#include "data.h"
+#include "Data.h"
 #include <string>
 #define MAX_KATEGORII 10
 

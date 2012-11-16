@@ -2,7 +2,7 @@
 #define KALENDARZ_H
 #include "Wydatek.h"
 #include "Element.h"
-#include "data.h"
+#include "Data.h"
 
 using namespace std;
 

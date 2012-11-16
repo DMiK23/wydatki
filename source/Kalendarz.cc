@@ -1,7 +1,7 @@
 #include "../headers/Kalendarz.h"
 #include "../headers/Wydatek.h"
 #include "../headers/Element.h"
-#include "../headers/data.h"
+#include "../headers/Data.h"
 
 using namespace std;
 
