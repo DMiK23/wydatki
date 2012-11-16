@@ -2,7 +2,8 @@
 #define WYDATEK_H
 #include <string>
 #include "Data.h"
-using namespace std;
+#include <ostream>
+using std::ostream;
 
 class Wydatek {
     string produkt_;

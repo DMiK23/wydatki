@@ -3,8 +3,9 @@
 #include "Wydatek.h"
 #include "Element.h"
 #include <string>
+#include <ostream>
+using std::ostream;
 
-using namespace std;
 
 class Kategoria{
     string nazwa_;
