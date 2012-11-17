@@ -3,8 +3,8 @@
 #include <string>
 #include "Data.h"
 #include <ostream>
-using std::ostream;
-using std::string;
+
+using namespace std;
 
 class Wydatek {
     string produkt_;

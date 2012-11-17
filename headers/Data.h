@@ -4,9 +4,9 @@
 using std::ostream;
 
 class Data{
-    int dzien_;
-    int miesiac_;
-    int rok_;
+    int d_;
+    int m_;
+    int r_;
 public:
     Data (int d, int m, int r);
     int compare (const Data& d);

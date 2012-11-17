@@ -14,20 +14,27 @@ Kategoria::Kategoria ()
 
 Kategoria::Kategoria (string nazwa)
 {
-
+	nazwa_ = nazwa;
+	poczatekListyA_ = NULL;
 }
 
 string Kategoria::getNazwa ()
 {
-	return NULL;
+	return nazwa_;
 }
 
-void Kategoria::wypiszWydatkiZKategorii (ostream& out)
+ElementListy* dodaj (ElementListy* e, Wydatek* w)
 {
-
+	//if (e->w == NULL) {
+		
 }
 
 void Kategoria::dodajWydatek (Wydatek* w)
+{
+	poczatekListyA_ = dodaj(poczatekListyA_, w);
+}
+
+void Kategoria::wypiszWydatkiZKategorii (ostream& out)
 {
 
 }
