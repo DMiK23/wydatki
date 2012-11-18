@@ -25,8 +25,7 @@ string Kategoria::getNazwa ()
 
 ElementListy* dodaj (ElementListy* e, Wydatek* w)
 {
-	ElementListy* wynik;
-	if (e->w == NULL) {
+	if (e == NULL) {
 		e = new ElementListy();
 		e -> w = w;
 		e -> nast = NULL;
@@ -34,14 +33,14 @@ ElementListy* dodaj (ElementListy* e, Wydatek* w)
 	} else {
 		if (e->w->getNazwa().compare (w->getNazwa()) < 0){
 			e->nast = dodaj (e->nast, w);
-		}else{
+			return e;
+		} else {
 			ElementListy* nowy = new ElementListy ();
 			nowy->w = w;
 			nowy->nast = e;
-			wynik = nowy;
+			return nowy;
 		}
 	}
-	return wynik;
 }
 
 void Kategoria::dodajWydatek (Wydatek* w)
