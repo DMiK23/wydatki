@@ -10,6 +10,7 @@ class Data{
 public:
     Data (int d, int m, int r);
     int compare (const Data& d);
+	int liczbaDni ()const;
     friend ostream& operator<<(ostream& out, const Data& d);
 };
 

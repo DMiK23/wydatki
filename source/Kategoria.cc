@@ -1,6 +1,7 @@
 #include "../headers/Kategoria.h"
 #include "../headers/Wydatek.h"
 #include "../headers/Element.h"
+#include <limits.h>
 #include <string>
 #include <ostream>
 
@@ -48,28 +49,28 @@ void Kategoria::dodajWydatek (Wydatek* w)
 	poczatekListyA_ = dodaj(poczatekListyA_, w);
 }
 
-ostream& Kategoria::wypiszWydatkiZKategorii (ostream& out)
+ostream& Kategoria::wypiszWydatkiZKategorii (ostream& out) const
 {
-	for (ElementListy* e = poczatekListyA_, e->nast == NULL, e = e->nast)
+	int c = 0;
+	for (ElementListy* e = poczatekListyA_; e != NULL; e = e->nast)
 	{
-		out << e->w->getNazwa << e->w->getCena << endl;
-		int c = 0;
-		c = c + e->w.getCena;
+		out << *(e->w) << endl;
+		c += e->w->getCena();
 	}
-	out << c << endl;
+	out << "w sumie: " << c << endl;
  	return out;
 }
 
 Wydatek* Kategoria::znajdzNajtanszy (string produkt)
 {
-	int najmniejsza = 99999999999999999999999;
+	int najmniejsza = INT_MAX;
 	Wydatek* najtanszy;
-	for (ElementListy* e = poczatekListyA_, e->nast == NULL; e = e->nast)
+	for (ElementListy* e = poczatekListyA_; e != NULL; e = e->nast)
 	{
-		if (e->nazwa_ == produkt)
-			if(najmniejsza > e->w->cena_)
+		if (e->w->getNazwa() == produkt)
+			if(najmniejsza > e->w->getCena())
 			{
-				najmniejsza = e->w->cena_;
+				najmniejsza = e->w->getCena();
 				najtanszy = e->w;
 			}
 	}
@@ -78,6 +79,6 @@ Wydatek* Kategoria::znajdzNajtanszy (string produkt)
 
 ostream& operator<<(ostream& out, const Kategoria& k)
 {
-	out << k.wypiszWydatkiZKategorii (ostream& out, ElementListy* poczatekListyA_);
+	k.wypiszWydatkiZKategorii (out);
 	return out;
 }

@@ -11,8 +11,8 @@ class Kalendarz
     ElementListy* poczatekListy1_;
 public:
     Kalendarz(); //ustawia root na NULL
-    void dodaj (Wydatek* w);
-    void wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo);
+    void dodajWydatek (Wydatek* w);
+    ostream& wypiszWydatkiZOkresu (ostream& out, const Data& dataOd, const Data& dataDo);
 };
 
 

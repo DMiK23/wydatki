@@ -15,7 +15,7 @@ public:
     Kategoria (string nazwa);
     string getNazwa ();
     void dodajWydatek (Wydatek* w);
-    ostream& wypiszWydatkiZKategorii (ostream& out);
+    ostream& wypiszWydatkiZKategorii (ostream& out) const;
     Wydatek* znajdzNajtanszy (string produkt);
     friend ostream& operator<<(ostream& out, const Kategoria& k);
 
