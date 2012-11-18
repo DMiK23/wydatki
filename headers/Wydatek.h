@@ -7,7 +7,7 @@
 using namespace std;
 
 class Wydatek {
-    string produkt_;
+    string nazwa_;
     string sklep_;
     int ilosc_;
     int cena_;
@@ -15,7 +15,8 @@ class Wydatek {
 
 public:
     Wydatek ( string nazwa, string sklep, int ilosc, int cena, const Data& kiedy);
-    string getSklep ();
+    string getNazwa ();
+	string getSklep ();
     Data getData ();
     int getCena ();
     friend ostream& operator<<(ostream& out, const Wydatek& w);
