@@ -33,13 +33,17 @@ chemia.dodajWydatek (&domestos);
 chemia.dodajWydatek (&proszek);
 cout<< "najtanszy jest " << *(jedzenie.znajdzNajtanszy ("chlep"))<<endl;
 cout << (jedzenie.wypiszWydatkiZKategorii (cout)) << endl;//to wyrzuca smiec
+cout << (chemia.wypiszWydatkiZKategorii (cout)) << endl;//to wyrzuca smiec
 cout << endl << "kalendarz:" << endl;
-Kalendarz k1 ();
+Kalendarz k1;
 k1.dodajWydatek (&chlep1);//error: request for member ‘dodajWydatek’ in ‘k1’, which is of non-class type ‘Kalendarz()’
 k1.dodajWydatek (&chlep2);
 k1.dodajWydatek (&chlep3);
 k1.dodajWydatek (&domestos);
 k1.dodajWydatek (&proszek);
+Data poczatek (0, 0, 0);
+Data koniec (0, 0, 3000);
+cout<<k1.wypiszWydatkiZOkresu (cout, poczatek, koniec);
 
 return 0;
 }

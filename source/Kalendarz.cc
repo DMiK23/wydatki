@@ -2,13 +2,13 @@
 #include "../headers/Wydatek.h"
 #include "../headers/Element.h"
 #include "../headers/Data.h"
-
+#include <iostream>
 using namespace std;
-
 
 Kalendarz::Kalendarz() //ustawia root na NULL
 {
 	poczatekListy1_ = NULL;
+	cout<<"Kalendarz utwprzony!"<<endl;
 }
 
 ElementListy* dodaj1 (ElementListy* e, Wydatek* w)
