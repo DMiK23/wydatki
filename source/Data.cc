@@ -14,10 +14,6 @@ int Data::compare (const Data& d)
 	return (d_ + 31 * m_ + 366 * r_)-(d.d_ + 31 * d.m_ + 366 * d.r_);
 }
 
-int Data::liczbaDni ()const
-{
-	return (d_ + 31 * m_ + 366 * r_);
-}
 
 ostream& operator<<(ostream& out, const Data& d)
 {

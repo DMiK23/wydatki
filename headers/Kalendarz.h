@@ -12,7 +12,7 @@ class Kalendarz
 public:
     Kalendarz(); //ustawia root na NULL
     void dodajWydatek (Wydatek* w);
-    ostream& wypiszWydatkiZOkresu (ostream& out, const Data& dataOd, const Data& dataDo);
+    void wypiszWydatkiZOkresu ( const Data& dataOd, const Data& dataDo);
 };
 
 

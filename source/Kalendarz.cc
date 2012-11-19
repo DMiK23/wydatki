@@ -45,12 +45,17 @@ void Kalendarz::wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo)
 	 * 	pocz = pocz->nast;
 	 * 
 	 * */
+	cout << endl << "Wydatki od " << dataOd << " do " << dataDo << endl;
 	for (ElementListy* e = poczatekListy1_; e != NULL; e = e->nast)
 	{
-		if (e->w->getData().liczbaDni()>=dataOd.liczbaDni() && e->w->getData().liczbaDni() <= dataDo.liczbaDni())
+		if (e->w->getData().compare(dataOd) > 0 && e->w->getData().compare(dataDo) < 0)
+		{
 			cout << *(e->w) << endl;
-		c += e->w->getCena();
+			c += e->w->getCena();
+		}
+		if (e->w->getData().compare(dataDo) > 0)
+			break;
 	}
-	cout << "w sumie: " << c << endl;
+	cout << "w sumie: " << c << "gr" << endl;
  	//return out;
 }

@@ -13,7 +13,7 @@ class Kategoria{
 public:
     Kategoria();
     Kategoria (string nazwa);
-    string getNazwa ();
+    string getNazwa ()const;
     void dodajWydatek (Wydatek* w);
     Wydatek* znajdzNajtanszy (string produkt);
     friend ostream& operator<<(ostream& out, const Kategoria& k);

@@ -19,7 +19,7 @@ Kategoria::Kategoria (string nazwa)
 	poczatekListyA_ = NULL;
 }
 
-string Kategoria::getNazwa ()
+string Kategoria::getNazwa ()const
 {
 	return nazwa_;
 }
@@ -73,6 +73,6 @@ ostream& operator<<(ostream& out, const Kategoria& k)
 		out << *(e->w) << endl;
 		c += e->w->getCena();
 	}
-	out << "w sumie: " << c << endl;
+	out << "W sumie za " << k.getNazwa() << ": " << c << "gr" << endl;
 	return out;
 }
