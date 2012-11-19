@@ -12,11 +12,13 @@ class Zakupy {
 	int iloscKategorii;
 public:
     Zakupy(); // tworzy liste kategorii
-    void addWydatek (Wydatek* w);
+    void addWydatek (Wydatek* w, Kategoria* ka, Kalendarz* k_);
 	bool addKategoria (string nk);
-    void wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo);
-    void wypiszWydatkiZKategorii ();
-    void szukanieNajtanszychProduktow ();//bedzie dawal wybor kategorii, nazwy
+	Kalendarz getKalendarz ();
+	friend ostream& operator << (ostream& out, const Zakupy z);
+// 	void wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo);
+//     void wypiszWydatkiZKategorii ();
+//     void szukanieNajtanszychProduktow ();
 };
 
 

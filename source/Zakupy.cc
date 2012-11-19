@@ -9,9 +9,11 @@ Zakupy::Zakupy() // tworzy liste kategorii
 	iloscKategorii = 0;
 }
 
-void Zakupy::addWydatek (Wydatek* w)
+void Zakupy::addWydatek (Wydatek* w, Kategoria* ka, Kalendarz* k_)
 {
-    
+    ka->dodajWydatek (w);
+	k_->dodajWydatek (w);
+	
 }
 
 bool Zakupy::addKategoria (string nk)
@@ -22,17 +24,16 @@ bool Zakupy::addKategoria (string nk)
 	return true;
 }
 
-void Zakupy::wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo)
+Kalendarz Zakupy::getKalendarz ()
 {
-
+		return kalendarz_;
 }
 
-void Zakupy::wypiszWydatkiZKategorii ()
+ostream& operator << (ostream& out, const Zakupy z)
 {
-
-}
-
-void Zakupy::szukanieNajtanszychProduktow ()//bedzie dawal wybor kategorii, nazwy
-{
-
+	for (int i = 0; i < MAX_KATEGORII; i++)
+	{
+		out<< z.kategorie_[i].getNazwa()<<endl;
+	}
+	return out;
 }

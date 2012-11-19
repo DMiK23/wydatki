@@ -8,7 +8,7 @@ using namespace std;
 Kalendarz::Kalendarz() //ustawia root na NULL
 {
 	poczatekListy1_ = NULL;
-	cout<<"Kalendarz utwprzony!"<<endl;
+	cout<<"Kalendarz utworzony!"<<endl;
 }
 
 ElementListy* dodaj1 (ElementListy* e, Wydatek* w)
@@ -39,12 +39,6 @@ void Kalendarz::dodajWydatek (Wydatek* w)
 void Kalendarz::wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo)
 {
 	int c = 0;
-	/*
-	 * ElementListy* pocz = poczatekListy1_;
-	 * while (pocz != NULL && pocz->w->getData().compare(dataOd) < 0)
-	 * 	pocz = pocz->nast;
-	 * 
-	 * */
 	cout << endl << "Wydatki od " << dataOd << " do " << dataDo << endl;
 	for (ElementListy* e = poczatekListy1_; e != NULL; e = e->nast)
 	{
@@ -57,5 +51,4 @@ void Kalendarz::wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo)
 			break;
 	}
 	cout << "w sumie: " << c << "gr" << endl;
- 	//return out;
 }
