@@ -6,12 +6,20 @@
 
 Zakupy::Zakupy() // tworzy liste kategorii
 {
-
+	iloscKategorii = 0;
 }
 
-bool Zakupy::addWydatek (Wydatek* w)
+void Zakupy::addWydatek (Wydatek* w)
 {
-    return false;
+    
+}
+
+bool Zakupy::addKategoria (string nk)
+{
+	if (iloscKategorii == MAX_KATEGORII)
+		return false;
+	kategorie_[iloscKategorii++] = Kategoria(nk);
+	return true;
 }
 
 void Zakupy::wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo)

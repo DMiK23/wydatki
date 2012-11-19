@@ -26,24 +26,30 @@ Wydatek chlep2 ("chlep", "piekarnia", 1, 130, d2);
 Wydatek chlep3 ("chlep", "zabka", 1, 110, d2);
 Wydatek domestos ("domestos", "zabka", 1, 110, d3);
 Wydatek proszek ("proszek", "bazar", 1, 110, d1);
+Wydatek arbuz ("arbuz", "bazar", 2, 700, d2);
 jedzenie.dodajWydatek (&chlep1);
 jedzenie.dodajWydatek (&chlep2);
 jedzenie.dodajWydatek (&chlep3);
-chemia.dodajWydatek (&domestos);
+jedzenie.dodajWydatek (&arbuz);
 chemia.dodajWydatek (&proszek);
+chemia.dodajWydatek (&domestos);
 cout<< "najtanszy jest " << *(jedzenie.znajdzNajtanszy ("chlep"))<<endl;
-cout << (jedzenie.wypiszWydatkiZKategorii (cout)) << endl;//to wyrzuca smiec
-cout << (chemia.wypiszWydatkiZKategorii (cout)) << endl;//to wyrzuca smiec
+cout << jedzenie << endl;//to wyrzuca smiec
+cout << chemia << endl;//to wyrzuca smiec
 cout << endl << "kalendarz:" << endl;
 Kalendarz k1;
-k1.dodajWydatek (&chlep1);//error: request for member ‘dodajWydatek’ in ‘k1’, which is of non-class type ‘Kalendarz()’
+k1.dodajWydatek (&chlep1);
 k1.dodajWydatek (&chlep2);
 k1.dodajWydatek (&chlep3);
 k1.dodajWydatek (&domestos);
 k1.dodajWydatek (&proszek);
+k1.dodajWydatek (&arbuz);
 Data poczatek (0, 0, 0);
 Data koniec (0, 0, 3000);
-cout<<k1.wypiszWydatkiZOkresu (cout, poczatek, koniec);
+Data karola8 (15, 8, 2000);
+Data primaaprilis (1, 4, 2000);
+k1.wypiszWydatkiZOkresu (cout, poczatek, koniec)<<endl;
+k1.wypiszWydatkiZOkresu (cout, primaaprilis, karola8)<<endl;
 
 return 0;
 }

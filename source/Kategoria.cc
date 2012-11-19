@@ -49,18 +49,6 @@ void Kategoria::dodajWydatek (Wydatek* w)
 	poczatekListyA_ = dodaj(poczatekListyA_, w);
 }
 
-ostream& Kategoria::wypiszWydatkiZKategorii (ostream& out) const
-{
-	int c = 0;
-	for (ElementListy* e = poczatekListyA_; e != NULL; e = e->nast)
-	{
-		out << *(e->w) << endl;
-		c += e->w->getCena();
-	}
-	out << "w sumie: " << c << endl;
- 	return out;
-}
-
 Wydatek* Kategoria::znajdzNajtanszy (string produkt)
 {
 	int najmniejsza = INT_MAX;
@@ -79,6 +67,12 @@ Wydatek* Kategoria::znajdzNajtanszy (string produkt)
 
 ostream& operator<<(ostream& out, const Kategoria& k)
 {
-	k.wypiszWydatkiZKategorii (out);
+	int c = 0;
+	for (ElementListy* e = k.poczatekListyA_; e != NULL; e = e->nast)
+	{
+		out << *(e->w) << endl;
+		c += e->w->getCena();
+	}
+	out << "w sumie: " << c << endl;
 	return out;
 }
