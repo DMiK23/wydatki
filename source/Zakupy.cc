@@ -14,9 +14,7 @@ Zakupy::Zakupy() // tworzy liste kategorii
 void Zakupy::addWydatek (Wydatek* w, Kategoria* ka, Kalendarz* k_)
 {
     ka->dodajWydatek (w);
-	k_->dodajWydatek (w);
-	cout << "dodano"<<endl;
-	
+	k_->dodajWydatek (w);	
 }
 
 bool Zakupy::addKategoria (string nk)
@@ -32,9 +30,9 @@ Kalendarz Zakupy::getKalendarz ()
 		return kalendarz_;
 }
 
-Kategoria Zakupy::getKategoria (int i)
+Kategoria* Zakupy::getKategoria (int i)
 {
-	return kategorie_[i];
+	return &(kategorie_[i]);
 }
 
 ostream& operator << (ostream& out, const Zakupy z)

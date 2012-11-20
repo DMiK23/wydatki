@@ -4,6 +4,7 @@
 #include <limits.h>
 #include <string>
 #include <ostream>
+#include <iostream>
 
 using std::ostream;
 
@@ -47,6 +48,7 @@ ElementListy* dodaj (ElementListy* e, Wydatek* w)
 void Kategoria::dodajWydatek (Wydatek* w)
 {
 	poczatekListyA_ = dodaj(poczatekListyA_, w);
+	cout << "Dodano do kategorii " << nazwa_<< endl;
 }
 
 Wydatek* Kategoria::znajdzNajtanszy (string produkt)

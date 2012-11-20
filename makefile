@@ -8,7 +8,7 @@ objects = Data.o Kalendarz.o Kategoria.o Wydatek.o Zakupy.o
 all : main.o $(objects)
 	g++ -o wydatki $(CXXFLAGS) $(objects) main.o
 
-main.o : $(objects)
+main.o : $(objects) menu.cc
 
 $(objects) : Data.h
 

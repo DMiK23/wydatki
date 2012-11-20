@@ -36,6 +36,6 @@ int Wydatek::getCena ()
 
 ostream& operator<<(ostream& out, const Wydatek& w)
 {
-	out<< w.nazwa_<< "; z "<< w.sklep_<< "; "<< w.ilosc_ << "; "<< w.cena_ << "gr; "<< w.kiedy_;
+	out << w.ilosc_<< "x " << w.nazwa_<< "; z "<< w.sklep_<< "; za " << w.cena_ << "gr; "<< w.kiedy_;
 	return out;
 }
