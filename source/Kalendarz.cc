@@ -8,7 +8,6 @@ using namespace std;
 Kalendarz::Kalendarz() //ustawia root na NULL
 {
 	poczatekListy1_ = NULL;
-	cout<<"Kalendarz utworzony!"<<endl;
 }
 
 ElementListy* dodaj1 (ElementListy* e, Wydatek* w)

@@ -3,6 +3,8 @@
 #include "../headers/Kalendarz.h"
 #include "../headers/Kategoria.h"
 #include <string>
+#include <iostream>
+using namespace std;
 
 Zakupy::Zakupy() // tworzy liste kategorii
 {
@@ -13,6 +15,7 @@ void Zakupy::addWydatek (Wydatek* w, Kategoria* ka, Kalendarz* k_)
 {
     ka->dodajWydatek (w);
 	k_->dodajWydatek (w);
+	cout << "dodano"<<endl;
 	
 }
 
@@ -29,11 +32,17 @@ Kalendarz Zakupy::getKalendarz ()
 		return kalendarz_;
 }
 
+Kategoria Zakupy::getKategoria (int i)
+{
+	return kategorie_[i];
+}
+
 ostream& operator << (ostream& out, const Zakupy z)
 {
-	for (int i = 0; i < MAX_KATEGORII; i++)
+	for (int i = 0; i < z.iloscKategorii; i++)
 	{
-		out<< z.kategorie_[i].getNazwa()<<endl;
+		out<< i << " " << z.kategorie_[i].getNazwa()<<endl;
+
 	}
 	return out;
 }

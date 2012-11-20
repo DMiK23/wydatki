@@ -15,6 +15,7 @@ public:
     void addWydatek (Wydatek* w, Kategoria* ka, Kalendarz* k_);
 	bool addKategoria (string nk);
 	Kalendarz getKalendarz ();
+	Kategoria getKategoria (int i);
 	friend ostream& operator << (ostream& out, const Zakupy z);
 // 	void wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo);
 //     void wypiszWydatkiZKategorii ();
