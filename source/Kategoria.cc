@@ -73,8 +73,8 @@ ostream& operator<<(ostream& out, const Kategoria& k)
 	for (ElementListy* e = k.poczatekListyA_; e != NULL; e = e->nast)
 	{
 		out << *(e->w) << endl;
-		c += e->w->getCena();
+		c += ( e->w->getIlosc() )*( e->w->getCena() );
 	}
-	out << "W sumie za " << k.getNazwa() << ": " << c << "gr" << endl;
+	out << "W sumie za " << k.getNazwa() << ": " << ((c-(c%100))/100) <<"zl " << (c%100) << "gr" << endl;
 	return out;
 }

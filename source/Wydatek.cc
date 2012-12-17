@@ -34,6 +34,11 @@ int Wydatek::getCena ()
     return cena_;
 }
 
+int Wydatek::getIlosc ()
+{
+	return ilosc_;
+}
+
 ostream& operator<<(ostream& out, const Wydatek& w)
 {
 	out << w.ilosc_<< "x " << w.nazwa_<< "; z "<< w.sklep_<< "; za " << w.cena_ << "gr; "<< w.kiedy_;

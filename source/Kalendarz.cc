@@ -44,10 +44,10 @@ void Kalendarz::wypiszWydatkiZOkresu (const Data& dataOd, const Data& dataDo)
 		if (e->w->getData().compare(dataOd) > 0 && e->w->getData().compare(dataDo) < 0)
 		{
 			cout << *(e->w) << endl;
-			c += e->w->getCena();
+			c += ( e->w->getIlosc() )*( e->w->getCena() );
 		}
 		if (e->w->getData().compare(dataDo) > 0)
 			break;
 	}
-	cout << "w sumie: " << c << "gr" << endl;
+	cout << "W sumie: " << ((c-(c%100))/100) <<"zl " << (c%100) << "gr" << endl;
 }
